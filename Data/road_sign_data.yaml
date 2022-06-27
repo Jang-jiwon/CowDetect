@@ -1,0 +1,5 @@
+train: /content/CowDetect/Data/train
+val:  /content/CowDetect/Data/val
+
+nc: 1
+names: ['cow']
