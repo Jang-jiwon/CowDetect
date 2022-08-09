@@ -1,5 +1,0 @@
-train: /content/CowDetect/Data/collected_cow/train
-val:  /content/CowDetect/Data/collected_cow/val
-
-nc: 1
-names: ['cow']
