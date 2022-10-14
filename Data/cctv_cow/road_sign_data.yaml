@@ -1,5 +1,0 @@
-train: /content/CowDetect/Data/cctv_cow/train
-val:  /content/CowDetect/Data/cctv_cow/val
-
-nc: 1
-names: ['cow']
