@@ -275,6 +275,7 @@ def detect(save_img=False, line_thickness=1):
                             id = int(id)  # integer id
                             label = None if hide_labels else (f'{id} {names[c]}' if hide_conf else \
                                 (f'{id} {conf:.2f}' if hide_class else f'{id} {names[c]} {conf:.2f}'))
+                            color = compute_color_for_id(id)
                             plot_one_box(bboxes, im0, label=label, color=colors[int(cls)], line_thickness=line_thickness)
 
                             """by 성호 : 소의 활동량을 activity_volume에 저장"""
