@@ -26,6 +26,8 @@ from collections import Counter
 import warnings
 warnings.filterwarnings('ignore')
 
+import json
+
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # strongsort root directory
@@ -51,7 +53,14 @@ from yolov7.utils.torch_utils import select_device, load_classifier, time_synchr
 from strong_sort.utils.parser import get_config
 from strong_sort.strong_sort import StrongSORT
 
+def compute_color_for_id(label):
+    """
+    Simple function that adds fixed color depending on the id
+    """
+    palette = (2 ** 11 - 1, 2 ** 15 - 1, 2 ** 20 - 1)
 
+    color = [int((p * (label ** 2 - label + 1)) % 255) for p in palette]
+    return tuple(color)
 
 def detect(save_img=False, line_thickness=1):
     source, weights, show_vid, save_txt, imgsz, trace = opt.source, opt.yolo_weights, opt.show_vid, opt.save_txt, opt.img_size, opt.trace
