@@ -34,3 +34,6 @@ $python track_v7.py --source sample_video.mp4 --save-vid --class 19 --yolo-weigh
 ```
 </br></br></br></br>
 [코랩으로 실행하기](train+tracking.ipynb)
+
+
+[커스텀데이터로 훈련하는 방법](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data)
