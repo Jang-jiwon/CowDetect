@@ -32,3 +32,5 @@ $python train.py --workers 8 --device 0 --batch-size 32 --data ../your_path/data
 ```
 $python track_v7.py --source sample_video.mp4 --save-vid --class 19 --yolo-weights ../your_path/yolov7-e6e_training.pt
 ```
+</br></br></br></br>
+[코랩으로 실행하기](train+tracking.ipynb)
