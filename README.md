@@ -6,7 +6,6 @@ yolov7와 deepsort기반 젖소 객체추적프로젝트입니다. 젖소의 활
 
 
 
-</br>
 ## yolov7의 성능 향상을 위한 시도들
 ![Alt text](img/결과표.png)
 </br>
