@@ -162,7 +162,7 @@ def detect(save_img=False, line_thickness=1):
     dt, seen = [0.0, 0.0, 0.0, 0.0], 0
     curr_frames, prev_frames = [None] * nr_sources, [None] * nr_sources
 
-    """ by 성호 : 변수 지정 """
+    """ 변수 지정 """
     activity_volume = {} # 키 : object id, 값 : 활동량 <= 매번 프레임마다 계산 및 저장
     position = {} # 키 : object id,  값 : ((중앙 x, 중앙 y), 프레임)
     activity_dic = {} # 키 : object id, 값 : 활동량 배열 <= 180 프레임마다 총 합 저장 및 activity_volume 초기화
@@ -250,7 +250,7 @@ def detect(save_img=False, line_thickness=1):
                         label = f'{id} {names[c]} {conf:.2f}'
 
                         
-                        """by 성호 : 소의 활동량을 activity_volume에 저장"""
+                        """: 소의 활동량을 activity_volume에 저장"""
                         center_x = output[0] + (output[2] - output[0]) / 2 # x의 중앙값
                         center_y = output[1] + (output[3] - output[1]) / 2 # y의 중앙값
                         cv2.line(im0, (int(center_x), int(center_y)), (int(center_x), int(center_y)), color, 5) # 가운데 점 표시
@@ -302,7 +302,7 @@ def detect(save_img=False, line_thickness=1):
                                 (f'{id} {conf:.2f}' if hide_class else f'{id} {names[c]} {conf:.2f}'))
                             plot_one_box(bboxes, im0, label=label, color=colors[int(cls)], line_thickness=line_thickness)
 
-                    """by 성호 : 180frame(약 6초) 동안 활동량 계산"""
+                    """ : 180frame(약 6초) 동안 활동량 계산"""
                     if frame_idx % 180 == 0:
                         tmp = 0
                         for z in activity_volume.keys():
