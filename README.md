@@ -1,4 +1,4 @@
-# CowDetect - 2022 캡스톤 디자인  은상 수상
+# CowDetect
 
 4조 졸업 프로젝트 
 
